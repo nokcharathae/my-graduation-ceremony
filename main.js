@@ -746,12 +746,12 @@ async function main() {
     const url = new URL(
         // "nike.splat",
         // location.href,
-        params.get("url") || "train.splat",
-        "https://huggingface.co/cakewalk/splat-data/resolve/main/",
+        params.get("url") || "output.splat",
+        "https://raw.githubusercontent.com/nokcharathae/my-graduation-ceremony/main/",
     );
     const req = await fetch(url, {
         mode: "cors", // no-cors, *cors, same-origin
-        credentials: "omit", // include, *same-origin, omit
+        credentials: "same-origin", // include, *same-origin, omit
     });
     console.log(req);
     if (req.status != 200)
