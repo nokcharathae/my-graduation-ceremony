@@ -155,7 +155,7 @@ let cameras = [
     },
 ];
 
-let camera = cameras[0];
+let camera = cameras[8];
 
 function getProjectionMatrix(fx, fy, width, height) {
     const znear = 0.2;
@@ -1361,7 +1361,7 @@ async function main() {
         if (/\.json$/i.test(file.name)) {
             fr.onload = () => {
                 cameras = JSON.parse(fr.result);
-                viewMatrix = getViewMatrix(cameras[0]);
+                viewMatrix = getViewMatrix(cameras[8]);
                 projectionMatrix = getProjectionMatrix(
                     camera.fx / downsample,
                     camera.fy / downsample,
